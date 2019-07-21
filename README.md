@@ -46,7 +46,8 @@ return object collection you can access $collection[index]->property;
 
 #### on static method
 ```
-$collection = Model::makeAll(
+$model = new Model();
+$collection = $model->makeAll(
 array("name"=>"Ram", "email"=>"ram@gmail.com", "age"=>23),
     array("name"=>"Shyam", "email"=>"shyam23@gmail.com", "age"=>28),
     array("name"=>"John", "email"=>"john@gmail.com", "age"=>33),
@@ -67,4 +68,18 @@ $model->country;
 or 
 $model['country'];
 ```
+#### collection in json
+```
+$model = new Model();
+$json = $model->addAll(MultidimensionalArray)->toJson();
+or 
+$json = Model::makeAll(MultidimensionalArray)->toJson();
+```
+
+### INSTALL
+
+```
+composer require saifalbd/model-collection
+```
+
 
